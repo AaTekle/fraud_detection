@@ -38,15 +38,15 @@ y = df["Class"]
 X_train, X_test, y_train, y_test = train_test_split(
     X,
     y,
-    test_size=0.25, #Use 25% of the data for testing.
-    random_state=42, #Keep the split reproducible.
-    stratify=y, #Preserve the same class balance in train and test sets.
+    test_size=0.25, #Use 25% of the data for testing
+    random_state=42, #Keep the split reproducible
+    stratify=y, #Preserve the same class balance in train and test sets
 )
 
-# Keep only normal transactions for training unsupervised anomaly models.
+# Keep only normal transactions for training unsupervised anomaly models
 normal_train = X_train[y_train == 0]
 
-# Evaluate a model using anomaly scores, save reports, and return summary metrics.
+# Evaluate a model using anomaly scores, save reports, and return summary metrics
 def evaluate_model(name, y_true, anomaly_score):
     roc = roc_auc_score(y_true, anomaly_score)
     pr_auc = average_precision_score(y_true, anomaly_score)
@@ -57,12 +57,12 @@ def evaluate_model(name, y_true, anomaly_score):
     best_idx = np.argmax(f1)
     best_threshold = thresholds[max(best_idx - 1, 0)]
     
-    # Convert anomaly scores into predicted labels using the best threshold.
+    # Convert anomaly scores into predicted labels using the best threshold
     y_pred = (anomaly_score >= best_threshold).astype(int)
-    # Generate classification metrics and confusion matrix.
+    # Generate classification metrics and confusion matrix
     report = classification_report(y_true, y_pred, digits=4)
     cm = confusion_matrix(y_true, y_pred)
-    # evaluation results.
+    # evaluation results
     print(f"\n{name}")
     print(f"ROC-AUC: {roc:.4f}")
     print(f"PR-AUC: {pr_auc:.4f}")
@@ -177,7 +177,7 @@ rf = Pipeline([
     )),
 ])
 
-# Train, score, evaluate, and save the Random Forest baseline model.
+# Train, score, evaluate, and save the Random Forest baseline model
 rf.fit(X_train, y_train)
 rf_scores = rf.predict_proba(X_test)[:, 1]
 results.append(evaluate_model("random_forest_supervised_baseline", y_test, rf_scores))
