@@ -605,7 +605,7 @@ Where:
 | Symbol    | Meaning                  |
 | --------- | ------------------------ |
 | $(\hat{y})$ | Final prediction         |
-| $(T_i(x))$  | Prediction from tree (i) |
+| $T_i(x)$  | Prediction from tree (i) |
 | $(n)$       | Number of trees          |
 
 ### Interpretation
