@@ -1,0 +1,16 @@
+isolation_forest
+ROC-AUC: 0.9485
+PR-AUC: 0.1198
+
+              precision    recall  f1-score   support
+
+           0     0.9988    0.9982    0.9985     71079
+           1     0.2160    0.2846    0.2456       123
+
+    accuracy                         0.9970     71202
+   macro avg     0.6074    0.6414    0.6221     71202
+weighted avg     0.9974    0.9970    0.9972     71202
+
+Confusion Matrix:
+[[70952   127]
+ [   88    35]]
