@@ -246,7 +246,7 @@ which represents the average ratio between the local density of neighboring poin
 | $\sum_{B\in N_k(A)}$ | Sum over all neighbors of $A$ | Adds one density ratio for each neighbor $B$ |
 | $\sum_{B\in N_k(A)}\frac{lrd(B)}{lrd(A)}$ | Total density-ratio sum | Adds all neighbor-to-$A$ density comparisons |
 | $\frac{1}{N_k(A)}$ | Mean-scaling factor | Divides the total by the number of neighbors |
-| $\frac{\sum_{B\in N_k(A)}\frac{lrd(B)}{lrd(A)}}{N_k(A)}$ | Average density ratio | The mean of all neighbor-to-$A$ density ratios |
+| $\frac{\sum_{B\in N_k(A)}\frac{lrd(B)}{lrd(A)}}{N_k(A)}$ | Average density ratio | The mean of all neighbor-to- $A$ density ratios |
 | $LOF_k(A)$ | Local Outlier Factor score | Final anomaly score for transaction $A$ |
 
 ---
