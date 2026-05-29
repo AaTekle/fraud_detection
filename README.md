@@ -604,9 +604,9 @@ Where:
 
 | Symbol    | Meaning                  |
 | --------- | ------------------------ |
-| $(\hat{y})$ | Final prediction         |
+| $\hat{y}$ | Final prediction         |
 | $T_i(x)$  | Prediction from tree (i) |
-| $(n)$       | Number of trees          |
+| $n$       | Number of trees          |
 
 ### Interpretation
 
