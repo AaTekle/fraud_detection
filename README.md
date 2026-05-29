@@ -243,7 +243,7 @@ which represents the average ratio between the local density of neighboring poin
 | $N_k(A) $                                                               | Number of neighbors | Usually equal to (k) |
 | $lrd(A)$                | Local reachability density of (A)          | Measures how densely packed the neighborhood around (A) is      |
 | $lrd(B)$                 | Local reachability density of neighbor (B) | Density surrounding a neighboring transaction                   |
-| $ \frac{lrd(B)}{lrd(A)}$  | Density ratio                              | Compares neighbor density to the density around (A)             |
+| $\frac{lrd(B)}{lrd(A)}$  | Density ratio                              | Compares neighbor density to the density around (A)             |
 | $LOF_k(A)$               | Local Outlier Factor score                 | Final anomaly score for transaction (A)                         |
 
 ---
