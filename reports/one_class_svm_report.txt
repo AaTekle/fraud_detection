@@ -1,0 +1,16 @@
+one_class_svm
+ROC-AUC: 0.9418
+PR-AUC: 0.2081
+
+              precision    recall  f1-score   support
+
+           0     0.9990    0.9986    0.9988     71079
+           1     0.3400    0.4146    0.3736       123
+
+    accuracy                         0.9976     71202
+   macro avg     0.6695    0.7066    0.6862     71202
+weighted avg     0.9978    0.9976    0.9977     71202
+
+Confusion Matrix:
+[[70980    99]
+ [   72    51]]

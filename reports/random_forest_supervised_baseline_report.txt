@@ -1,0 +1,16 @@
+random_forest_supervised_baseline
+ROC-AUC: 0.9605
+PR-AUC: 0.8452
+
+              precision    recall  f1-score   support
+
+           0     0.9997    0.9999    0.9998     71079
+           1     0.9259    0.8130    0.8658       123
+
+    accuracy                         0.9996     71202
+   macro avg     0.9628    0.9064    0.9328     71202
+weighted avg     0.9995    0.9996    0.9996     71202
+
+Confusion Matrix:
+[[71071     8]
+ [   23   100]]
