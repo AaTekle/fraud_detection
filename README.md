@@ -709,7 +709,7 @@ Weaknesses:
 
 ---
 
-# Key Findings
+# Findings
 
 1. Fraud detection is an extreme class imbalance problem.
 2. PR-AUC is more informative than accuracy.
