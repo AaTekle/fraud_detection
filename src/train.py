@@ -1,5 +1,5 @@
 # src/train.py
-# dependencies for paths, models, math, data handling, and plotting.
+# dependencies for paths, models, math, data handling, and plotting
 from pathlib import Path
 import joblib
 import numpy as np
@@ -30,11 +30,11 @@ REPORT_DIR.mkdir(exist_ok=True)
 
 df = pd.read_csv(DATA_PATH)
 
-#Splitting the data into features and target label.
+#Splitting the data into features and target label
 X = df.drop(columns=["Class"])
 y = df["Class"]
 
-#Split data into training and testing sets.
+#Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(
     X,
     y,
@@ -76,7 +76,7 @@ def evaluate_model(name, y_true, anomaly_score):
         f.write(report)
         f.write("\nConfusion Matrix:\n")
         f.write(str(cm))
-    #plotting the precision-recall curve.
+    #plotting the precision-recall curve
     plt.figure()
     plt.plot(recall, precision)
     plt.xlabel("Recall")
