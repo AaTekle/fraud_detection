@@ -51,7 +51,7 @@ def evaluate_model(name, y_true, anomaly_score):
     roc = roc_auc_score(y_true, anomaly_score)
     pr_auc = average_precision_score(y_true, anomaly_score)
 
-    # Find the threshold that gives the best F1 score.
+    # Find the threshold that gives the best F1 score
     precision, recall, thresholds = precision_recall_curve(y_true, anomaly_score)
     f1 = 2 * precision * recall / (precision + recall + 1e-9)
     best_idx = np.argmax(f1)
@@ -68,7 +68,7 @@ def evaluate_model(name, y_true, anomaly_score):
     print(f"PR-AUC: {pr_auc:.4f}")
     print(report)
     print(cm)
-    #Save the text report.
+    #Save the text report
     with open(REPORT_DIR / f"{name}_report.txt", "w") as f:
         f.write(f"{name}\n")
         f.write(f"ROC-AUC: {roc:.4f}\n")
@@ -112,7 +112,7 @@ joblib.dump(iso, MODEL_DIR / "isolation_forest.joblib") #exporting the model to 
 
 
 
-# Build a One-Class SVM pipeline.
+# Build a One-Class SVM pipeline
 ocsvm = Pipeline([
     ("scaler", StandardScaler()),
     ("model", OneClassSVM(
@@ -149,7 +149,7 @@ ocsvm_scores = -ocsvm.decision_function(X_test)
 results.append(evaluate_model("one_class_svm", y_test, ocsvm_scores))
 joblib.dump(ocsvm, MODEL_DIR / "one_class_svm.joblib")
 
-# Local Outlier Factor pipeline.
+# Local Outlier Factor pipeline
 lof = Pipeline([
     ("scaler", StandardScaler()),
     ("model", LocalOutlierFactor(
@@ -166,7 +166,7 @@ lof_scores = -lof.decision_function(X_test)
 results.append(evaluate_model("local_outlier_factor", y_test, lof_scores))
 joblib.dump(lof, MODEL_DIR / "local_outlier_factor.joblib")
 
-#Supervised Random Forest baseline pipeline.
+#Supervised Random Forest baseline pipeline
 rf = Pipeline([
     ("scaler", StandardScaler()),
     ("model", RandomForestClassifier(
