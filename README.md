@@ -359,12 +359,12 @@ reach\_dist_k(A,B)
 
 ### Symbol Definitions
 
-| Symbol                          | Meaning                     | Intuition                                   |                               |                                               |
-| ------------------------------- | --------------------------- | ------------------------------------------- | ----------------------------- | --------------------------------------------- |
-| $reach_dist_k(A,B)$             | Reachability distance       | Effective distance from (A) to neighbor (B) |                               |                                               |
-| $\sum reach_dist_k(A,B)$        | Total reachability distance | Overall spread of the neighborhood          |                               |                                               |
+| Symbol                          | Meaning                     | Intuition                                   |
+| ------------------------------- | --------------------------- | ------------------------------------------- |
+| $reach_dist_k(A,B)$             | Reachability distance       | Effective distance from (A) to neighbor (B) |
+| $\sum reach_dist_k(A,B)$        | Total reachability distance | Overall spread of the neighborhood          |
 | $\frac{\sum_{B \in N_k(A)} reach\_dist_k(A,B)}{N_k(A)}$                                          | Average reachability distance | Average spacing between (A) and its neighbors |
-| $lrd(A)$                        | Local reachability density  | Inverse of average spacing                  |                               |                                               |
+| $lrd(A)$                        | Local reachability density  | Inverse of average spacing                  |
 
 ---
 
