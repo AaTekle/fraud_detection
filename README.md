@@ -234,17 +234,17 @@ which represents the average ratio between the local density of neighboring poin
 
 ## Symbol Definitions
 
-| Symbol                  | Meaning                                    | Intuition                                                       |                     |                      |
-| ----------------------- | ------------------------------------------ | --------------------------------------------------------------- | ------------------- | -------------------- |
-|$A$                     | Observation being evaluated                | The transaction whose anomaly score is being calculated         |                     |                      |
-| $B$                      | Neighboring observation                    | One of the nearby transactions surrounding (A)                  |                     |                      |
-| $k$                      | Number of neighbors                        | Controls the size of the local neighborhood used for comparison |                     |                      |
-| $N_k(A)$                 | Set of (k)-nearest neighbors of (A)        | Transactions closest to (A) in feature space                    |                     |                      |
+| Symbol                  | Meaning                                    | Intuition                                                       |
+| ----------------------- | ------------------------------------------ | --------------------------------------------------------------- |
+|$A$                     | Observation being evaluated                | The transaction whose anomaly score is being calculated         |
+| $B$                      | Neighboring observation                    | One of the nearby transactions surrounding (A)                  |
+| $k$                      | Number of neighbors                        | Controls the size of the local neighborhood used for comparison |
+| $N_k(A)$                 | Set of (k)-nearest neighbors of (A)        | Transactions closest to (A) in feature space                    |
 | $N_k(A) $                                                               | Number of neighbors | Usually equal to (k) |
-| $lrd(A)$                | Local reachability density of (A)          | Measures how densely packed the neighborhood around (A) is      |                     |                      |
-| $lrd(B)$                 | Local reachability density of neighbor (B) | Density surrounding a neighboring transaction                   |                     |                      |
-| $ \frac{lrd(B)}{lrd(A)}$  | Density ratio                              | Compares neighbor density to the density around (A)             |                     |                      |
-| $LOF_k(A)$               | Local Outlier Factor score                 | Final anomaly score for transaction (A)                         |                     |                      |
+| $lrd(A)$                | Local reachability density of (A)          | Measures how densely packed the neighborhood around (A) is      |
+| $lrd(B)$                 | Local reachability density of neighbor (B) | Density surrounding a neighboring transaction                   |
+| $ \frac{lrd(B)}{lrd(A)}$  | Density ratio                              | Compares neighbor density to the density around (A)             |
+| $LOF_k(A)$               | Local Outlier Factor score                 | Final anomaly score for transaction (A)                         |
 
 ---
 
