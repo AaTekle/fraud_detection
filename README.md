@@ -419,6 +419,24 @@ lrd(B)
 lrd(A)
 }
 ```
+### LOF Formula Components and Their Role in the Project
+
+| Symbol / Component      | Meaning                                          | Project Application                                                                                      |                                 |                                                              |
+| ----------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------------------------------- | ------------------------------- | ------------------------------------------------------------ |
+| $A$                     | The point being evaluated                        | The current data instance (e.g., transaction, sensor reading, network event) being checked for anomalies |                                 |                                                              |
+| $N_k(A)$               | Set of (k)-nearest neighbors of (A)              | Identifies the local neighborhood used as the reference group for comparison                             |                                 |                                                              |
+| $N_k(A)                                            $                                                                                                        | Number of neighbors in (N_k(A)) | Used to average the density comparisons across all neighbors |
+| $B$                     | A neighbor of (A)                                | Represents each nearby data point used in the comparison                                                 |                                 |                                                              |
+| $lrd(A)$                | Local reachability density of (A)                | Measures how densely (A) is surrounded by other points                                                   |                                 |                                                              |
+| $lrd(B)$                | Local reachability density of neighbor (B)       | Measures the density of each neighboring point                                                           |                                 |                                                              |
+| $\frac{lrd(B)}{lrd(A)}$ | Density ratio between neighbor (B) and point (A) | Determines whether (A) is less or more densely located than its neighbors                                |                                 |                                                              |
+| $\sum_{B\in N_k(A)}$    | Sum of density ratios for all neighbors          | Aggregates all local density comparisons                                                                 |                                 |                                                              |
+| $\frac{1}{  N_k(A)                                           }$                                                                                                      | Averaging factor                | Produces the mean density comparison across the neighborhood |
+| $LOF_k(A)$              | Final Local Outlier Factor score                 | Used to classify whether (A) is normal or anomalous                                                      |                                 |                                                              |
+| $LOF_k(A) \approx 1$    | Similar density to neighbors                     | Point is likely normal                                                                                   |                                 |                                                              |
+| $LOF_k(A) > 1$          | Lower density than neighbors                     | Point may be anomalous                                                                                   |                                 |                                                              |
+| $LOF_k(A) \gg 1$        | Much lower density than neighbors                | Strong indication of an outlier                                                                          |                                 |                                                              |
+| $LOF_k(A) < 1$          | Higher density than neighbors                    | Point is in a dense cluster and is unlikely to be anomalous                                              |                                 |                                                              |
 
 This is the average density ratio.
 
