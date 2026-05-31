@@ -607,6 +607,7 @@ Where:
 | $\hat{y}$ | Final prediction         |
 | $T_i(x)$  | Prediction from tree (i) |
 | $n$       | Number of trees          |
+| $mode$    | The value that appears most frequently among the tree predictions (majority vote)          |
 
 ### Interpretation
 
