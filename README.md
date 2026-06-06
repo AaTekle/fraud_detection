@@ -733,7 +733,7 @@ Weaknesses:
 1. Fraud detection is an extreme class imbalance problem.
 2. PR-AUC is more informative than accuracy.
 3. Isolation Forest and One-Class SVM performed well for unsupervised anomaly detection.
-4. Random Forest significantly outperformed anomaly detection methods due to access to labeled fraud examples.
+4. Random Forest outperformed anomaly detection methods due to access to labeled fraud examples.
 5. One-Class SVM achieved the strongest unsupervised fraud recall.
 
 ---
