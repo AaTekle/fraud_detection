@@ -95,6 +95,11 @@ def evaluate_model(name, y_true, anomaly_score):
 results = []
 # Building an Isolation Forest pipeline
 iso = Pipeline([
+    '''
+scaler helps standardizes numeric features by centering values around 0 and scaling
+them to a similar range. This helps models train more effectively and
+prevents features with larger values from having too much influence.
+    '''
     ("scaler", StandardScaler()),
     ("model", IsolationForest(
         n_estimators=300, # Number of trees in the forest
