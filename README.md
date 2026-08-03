@@ -6,7 +6,7 @@ Fraud detection pipeline using anomaly detection and supervised machine learning
 
 **Goal:** Identify fraudulent credit card transactions while minimizing false positives and maximizing recall for fraud cases.
 
-The project evaluates four machine learning algorithms:
+project evaluates four machine learning algorithms:
 
 1. Isolation Forest
 2. One-Class SVM
