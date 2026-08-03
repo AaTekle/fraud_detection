@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project builds a fraud detection pipeline using anomaly detection and supervised machine learning techniques on highly imbalanced financial transaction data.
+Fraud detection pipeline using anomaly detection and supervised machine learning techniques on highly imbalanced financial transaction data.
 
 **Goal:** Identify fraudulent credit card transactions while minimizing false positives and maximizing recall for fraud cases.
 
