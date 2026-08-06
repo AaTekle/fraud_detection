@@ -744,11 +744,11 @@ Weaknesses:
    Andrea Dal Pozzolo et al., Credit Card Fraud Detection Dataset
    [https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
 
-2. Isolation Forest:
+2. [Isolation Forest:](https://ieeexplore.ieee.org/document/4781136)
    Liu, Ting, Zhou. Isolation Forest. IEEE ICDM 2008.
 
-3. Local Outlier Factor:
+3. [Local Outlier Factor:](https://webdocs.cs.ualberta.ca/~zaiane/pub/check/breunig.pdf)
    Breunig et al. LOF: Identifying Density-Based Local Outliers. SIGMOD 2000.
 
-4. One-Class SVM:
+4. [One-Class SVM:](https://www.researchgate.net/publication/220499623_Estimating_the_Support_of_a_High-Dimensional_Distribution)
    Schölkopf et al. Estimating the Support of a High-Dimensional Distribution. Neural Computation 2001.
